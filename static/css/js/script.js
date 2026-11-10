@@ -1,0 +1,1 @@
+console.log("Clínica Veterinaria Patitas funcionando correctamente.");

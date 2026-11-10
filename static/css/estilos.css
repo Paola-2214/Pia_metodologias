@@ -1,0 +1,1414 @@
+/* =========================================================
+   CLÍNICA VETERINARIA PATITAS
+   ESTILOS GENERALES
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   BARRA DE NAVEGACIÓN
+========================================================= */
+
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+.navbar {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 7%;
+
+    background: #ffffff;
+
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #198754;
+    white-space: nowrap;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu a {
+    color: #444444;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+.menu a:hover {
+    color: #198754;
+}
+
+.botones-menu {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-login,
+.btn-cita {
+    display: inline-block;
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+    cursor: pointer;
+}
+
+.btn-login {
+    color: #198754;
+    border: 1px solid #198754;
+    background: white;
+}
+
+.btn-login:hover {
+    background: #eef9f2;
+}
+
+.btn-cita {
+    background: #198754;
+    color: white;
+    border: 1px solid #198754;
+}
+
+.btn-cita:hover {
+    background: #146c43;
+}
+
+
+/* =========================================================
+   HERO / PÁGINA PRINCIPAL
+========================================================= */
+
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 70px 8%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #effbf4,
+            #dff5e7
+        );
+}
+
+.hero-texto {
+    flex: 1;
+    max-width: 650px;
+}
+
+.hero-texto h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+    color: #25342c;
+}
+
+.hero-texto p {
+    font-size: 18px;
+    color: #555555;
+    margin-bottom: 25px;
+}
+
+.subtitulo {
+    display: inline-block;
+
+    color: #198754;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 15px;
+}
+
+.hero-botones {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton-principal,
+.boton-secundario {
+    display: inline-block;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+
+    cursor: pointer;
+}
+
+.boton-principal {
+    background: #198754;
+    color: white;
+}
+
+.boton-principal:hover {
+    background: #146c43;
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    color: #198754;
+    border: 1px solid #198754;
+    background: white;
+}
+
+.boton-secundario:hover {
+    background: #eef9f2;
+}
+
+.hero-mascota {
+    flex: 1;
+    text-align: center;
+    font-size: 160px;
+}
+
+
+/* =========================================================
+   ENCABEZADO DE PÁGINAS INTERNAS
+========================================================= */
+
+.pagina-titulo {
+    padding: 65px 20px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #198754,
+            #239b61
+        );
+
+    color: white;
+}
+
+.pagina-titulo p {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.pagina-titulo h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.pagina-titulo span {
+    opacity: 0.9;
+}
+
+
+/* =========================================================
+   SECCIONES
+========================================================= */
+
+.seccion {
+    padding: 70px 7%;
+}
+
+.fondo {
+    background: #f7faf8;
+}
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-seccion p {
+    color: #198754;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 7px;
+}
+
+.titulo-seccion h2 {
+    color: #2f3a34;
+    font-size: 32px;
+}
+
+
+/* =========================================================
+   TARJETAS GENERALES
+========================================================= */
+
+.tarjetas {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 25px;
+}
+
+.tarjeta {
+    background: white;
+
+    padding: 28px;
+
+    border-radius: 16px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.25s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.11);
+}
+
+.tarjeta h3 {
+    color: #198754;
+    margin: 10px 0;
+}
+
+.tarjeta p {
+    color: #666666;
+}
+
+
+/* =========================================================
+   PRODUCTOS PÁGINA PRINCIPAL
+========================================================= */
+
+.producto {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+
+    transition: 0.25s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+}
+
+.producto-imagen {
+    height: 150px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 80px;
+
+    background: #eff9f3;
+
+    border-radius: 12px;
+
+    margin-bottom: 18px;
+}
+
+.producto h3 {
+    margin-bottom: 7px;
+}
+
+.producto p {
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   DOCTORES
+========================================================= */
+
+.doctor {
+    text-align: center;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.doctor-imagen {
+    width: 100px;
+    height: 100px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e7f7ed;
+
+    font-size: 50px;
+}
+
+.doctor h3 {
+    color: #198754;
+}
+
+
+/* =========================================================
+   SUCURSALES
+========================================================= */
+
+.sucursales {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
+
+.sucursal {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.sucursal h3 {
+    color: #198754;
+    margin-bottom: 12px;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.cta {
+    padding: 65px 20px;
+
+    text-align: center;
+
+    background: #198754;
+
+    color: white;
+}
+
+.cta h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 25px;
+}
+
+.boton-blanco {
+    display: inline-block;
+
+    background: white;
+
+    color: #198754;
+
+    padding: 13px 22px;
+
+    border-radius: 9px;
+
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.boton-blanco:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FORMULARIOS
+========================================================= */
+
+.contenedor-formulario {
+    width: 100%;
+
+    max-width: 550px;
+
+    margin: auto;
+}
+
+.formulario {
+    background: white;
+
+    padding: 32px;
+
+    border-radius: 16px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.formulario h1,
+.formulario h2 {
+    margin-bottom: 22px;
+    color: #2f3a34;
+}
+
+.formulario label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #444444;
+
+    font-weight: bold;
+}
+
+.formulario input,
+.formulario select,
+.formulario textarea {
+    width: 100%;
+
+    padding: 12px 13px;
+
+    margin-bottom: 17px;
+
+    border: 1px solid #d9dedb;
+
+    border-radius: 8px;
+
+    background: white;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+.formulario input:focus,
+.formulario select:focus,
+.formulario textarea:focus {
+    border-color: #198754;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 135, 84, 0.10);
+}
+
+.formulario textarea {
+    resize: vertical;
+}
+
+.boton-formulario {
+    width: 100%;
+
+    border: none;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    background: #198754;
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.boton-formulario:hover {
+    background: #146c43;
+}
+
+.texto-formulario {
+    text-align: center;
+    color: #666666;
+    margin-top: 18px;
+}
+
+.enlace-formulario {
+    color: #198754;
+    font-weight: bold;
+}
+
+.volver {
+    display: block;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    color: #555555;
+}
+
+
+/* =========================================================
+   MENSAJES
+========================================================= */
+
+.mensaje-error {
+    background: #fdebec;
+
+    color: #a1262f;
+
+    border: 1px solid #f5c2c7;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 18px;
+}
+
+.mensaje-exito {
+    background: #e8f7ee;
+
+    color: #146c43;
+
+    border: 1px solid #badbcc;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   MASCOTAS
+========================================================= */
+
+.contenedor-mascotas {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+.mascota-formulario {
+    position: relative;
+}
+
+.lista-mascotas {
+    display: grid;
+    gap: 18px;
+}
+
+.tarjeta-mascota {
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 22px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+
+    transition: 0.2s;
+}
+
+.tarjeta-mascota:hover {
+    transform: translateY(-3px);
+}
+
+.mascota-icono {
+    min-width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e8f7ee;
+
+    font-size: 38px;
+}
+
+.tarjeta-mascota h3 {
+    color: #198754;
+}
+
+.sin-mascotas {
+    text-align: center;
+
+    padding: 35px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    color: #777777;
+}
+
+
+/* =========================================================
+   CITAS
+========================================================= */
+
+.contenedor-citas {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+.lista-citas {
+    display: grid;
+    gap: 18px;
+}
+
+.tarjeta-cita {
+    background: white;
+
+    padding: 23px;
+
+    border-radius: 15px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.cita-fecha {
+    color: #198754;
+
+    font-weight: bold;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+.estado-cita {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    background: #e8f7ee;
+
+    color: #198754;
+
+    font-weight: bold;
+
+    font-size: 13px;
+}
+
+.boton-ir {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    padding: 10px 17px;
+
+    border-radius: 8px;
+
+    background: #198754;
+
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   PRODUCTOS / COMPRAS
+========================================================= */
+
+.contenedor-compras {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1.3fr;
+
+    gap: 35px;
+
+    align-items: start;
+}
+
+.producto-stock {
+    display: flex;
+
+    gap: 18px;
+
+    padding: 22px;
+
+    margin-bottom: 17px;
+
+    background: white;
+
+    border-radius: 15px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.producto-stock-icono {
+    min-width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e8f7ee;
+
+    border-radius: 12px;
+
+    font-size: 38px;
+}
+
+.producto-stock h3 {
+    color: #198754;
+}
+
+.historial-compras {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    gap: 17px;
+}
+
+.tarjeta-compra {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+.total-compra {
+    color: #198754;
+
+    font-size: 19px;
+
+    font-weight: bold;
+}
+
+.titulo-lista {
+    margin-bottom: 20px;
+    color: #2f3a34;
+}
+
+
+/* =========================================================
+   PANEL ADMIN - ACCIONES
+========================================================= */
+
+.panel-acciones {
+    max-width: 1000px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 24px;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+.accion-admin {
+    display: block;
+
+    position: relative;
+
+    z-index: 30;
+
+    background: white;
+
+    padding: 32px 25px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    color: #333333;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.25s;
+
+    cursor: pointer !important;
+
+    pointer-events: auto !important;
+}
+
+.accion-admin:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.12);
+
+    border-color: #b9dfc8;
+}
+
+.accion-admin > div {
+    font-size: 50px;
+    margin-bottom: 12px;
+}
+
+.accion-admin h3 {
+    color: #198754;
+    margin-bottom: 8px;
+}
+
+.accion-admin p {
+    color: #666666;
+}
+
+/*
+   Hace que al picar el texto o emoji,
+   el clic llegue al enlace completo.
+*/
+
+a.accion-admin * {
+    pointer-events: none;
+}
+
+
+/* TARJETAS BLOQUEADAS */
+
+.accion-admin.bloqueado {
+    opacity: 0.55;
+
+    cursor: not-allowed !important;
+
+    pointer-events: none !important;
+}
+
+
+/* =========================================================
+   RESUMEN ADMIN
+========================================================= */
+
+.panel-resumen {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(160px, 1fr));
+
+    gap: 20px;
+}
+
+.tarjeta-admin {
+    background: white;
+
+    padding: 28px 20px;
+
+    border-radius: 16px;
+
+    text-align: center;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.07);
+
+    transition: 0.25s;
+}
+
+.tarjeta-admin:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.10);
+}
+
+.tarjeta-admin > div {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-admin h3 {
+    color: #555555;
+    margin-bottom: 8px;
+}
+
+.tarjeta-admin span {
+    color: #198754;
+
+    font-size: 28px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   TABLAS DEL ADMIN
+========================================================= */
+
+.tabla-contenedor {
+    width: 100%;
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    overflow-x: auto;
+
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 6px 20px rgba(0, 0, 0, 0.07);
+}
+
+.tabla-admin {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: white;
+}
+
+.tabla-admin thead {
+    background: #198754;
+    color: white;
+}
+
+.tabla-admin th {
+    padding: 15px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+}
+
+.tabla-admin td {
+    padding: 15px;
+
+    border-bottom: 1px solid #edf1ef;
+
+    color: #555555;
+}
+
+.tabla-admin tbody tr {
+    transition: 0.2s;
+}
+
+.tabla-admin tbody tr:hover {
+    background: #f2faf5;
+}
+
+.tabla-admin input[type="number"] {
+    padding: 8px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 7px;
+}
+
+
+/* =========================================================
+   ADMINISTRAR SERVICIOS
+========================================================= */
+
+.tarjeta-servicio-admin {
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #edf1ef;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.07);
+}
+
+.tarjeta-servicio-admin label {
+    display: block;
+
+    font-weight: bold;
+
+    color: #444444;
+
+    margin-bottom: 7px;
+}
+
+.tarjeta-servicio-admin input,
+.tarjeta-servicio-admin textarea,
+.tarjeta-servicio-admin select {
+    width: 100%;
+
+    padding: 11px;
+
+    margin-bottom: 15px;
+
+    border: 1px solid #dddddd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 15px;
+}
+
+.tarjeta-servicio-admin input:focus,
+.tarjeta-servicio-admin textarea:focus,
+.tarjeta-servicio-admin select:focus {
+    border-color: #198754;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 135, 84, 0.10);
+}
+
+.tarjeta-servicio-admin textarea {
+    resize: vertical;
+}
+
+.botones-admin-servicio {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.btn-editar,
+.btn-eliminar {
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn-editar {
+    background: #198754;
+}
+
+.btn-editar:hover {
+    background: #146c43;
+}
+
+.btn-eliminar {
+    background: #dc3545;
+}
+
+.btn-eliminar:hover {
+    background: #b02a37;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 50px 7%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 35px;
+
+    background: #25342c;
+
+    color: white;
+}
+
+footer h3,
+footer h4 {
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #d9e2dd;
+    margin-bottom: 6px;
+}
+
+.copyright {
+    text-align: center;
+
+    padding: 16px;
+
+    background: #1b2821;
+
+    color: #cbd6cf;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .botones-menu {
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        text-align: center;
+
+        min-height: auto;
+    }
+
+    .hero-texto h1 {
+        font-size: 38px;
+    }
+
+    .hero-botones {
+        justify-content: center;
+    }
+
+    .hero-mascota {
+        font-size: 110px;
+    }
+
+    .contenedor-mascotas,
+    .contenedor-citas,
+    .contenedor-compras {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .seccion {
+        padding: 50px 20px;
+    }
+
+    .pagina-titulo {
+        padding: 45px 20px;
+    }
+
+    .pagina-titulo h1 {
+        font-size: 30px;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 27px;
+    }
+
+    .hero {
+        padding: 55px 20px;
+    }
+
+    .hero-texto h1 {
+        font-size: 33px;
+    }
+
+    .formulario {
+        padding: 23px;
+    }
+
+    .panel-acciones {
+        grid-template-columns: 1fr;
+    }
+
+    .panel-resumen {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .botones-admin-servicio {
+        flex-direction: column;
+    }
+
+    .btn-editar,
+    .btn-eliminar {
+        width: 100%;
+    }
+
+}
+/* Tarjetas clicables del resumen del administrador */
+a.tarjeta-admin { cursor:pointer; transition: transform .15s ease, box-shadow .15s ease; }
+a.tarjeta-admin:hover { transform:translateY(-3px); box-shadow:0 8px 22px rgba(0,0,0,.11); }
+
+/* Mejoras discretas de administración: conservan la identidad visual original. */
+.botones-menu {display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.panel-acciones {align-items:stretch}
+.stock-movimiento {display:flex;flex-wrap:wrap;align-items:center;gap:7px;max-width:360px}
+.stock-movimiento input[type=number] {width:76px;min-width:65px;max-width:100%;padding:9px;border:1px solid #d5ded8;border-radius:8px}
+.stock-movimiento input[type=text] {width:120px;min-width:85px;max-width:100%;padding:9px;border:1px solid #d5ded8;border-radius:8px}
+.stock-movimiento button {white-space:nowrap;padding:9px 12px;border-radius:8px;cursor:pointer}
+.stock-aviso {display:block;font-size:12px;color:#a05e09;margin-top:4px;font-weight:600}
+.stock-link {margin-top:24px}
+.seguridad-tarjeta {max-width:720px;margin:0 auto;background:white;padding:32px;border-radius:16px;box-shadow:0 8px 26px rgba(22,77,49,.07);line-height:1.7}
+.seguridad-tarjeta h2 {color:#178651;margin:0 0 14px}
+.seguridad-tarjeta .btn-cita {display:inline-block;margin-top:14px;text-decoration:none}
+.seguridad-form {display:grid;gap:12px;max-width:460px}
+.seguridad-form input {width:100%;padding:12px;border-radius:8px;border:1px solid #cdd9d2}
+@media(max-width:900px){.tabla-contenedor{overflow-x:auto}.stock-movimiento{min-width:175px}.navbar{flex-wrap:wrap}}
